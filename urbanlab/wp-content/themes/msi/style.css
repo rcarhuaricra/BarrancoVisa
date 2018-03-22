@@ -1,0 +1,95 @@
+
+/*
+Theme Name: MSIWordpress
+Theme URI: 
+Author: ronal ivan carhuaricra vivas
+Author URI: https://ricv.pe/
+Description: template MSI web Wordpress
+Version: 1
+*/
+
+
+.body_home {
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center top;
+    background-image: url(images/fondo-2.jpg);
+}
+@media (max-width: 768px) {
+ 
+    .body_home{
+        padding: 0px;
+    }
+    header .portales {
+        display: none;
+    }
+    .navbar li a, .navbar .navbar-collapse { 
+        background-color: white;
+    }
+
+}
+header {    
+    position: relative;
+    background-color: white;
+    padding: 0em;
+    height: 130px;
+}
+#main{
+    padding-bottom:  15px;
+    position:initial;    
+    background-color: white;
+    border-top: 1px solid rgba(105,105,105,0.2);
+}
+#main .principal{
+    padding-top:  15px;
+    position:initial;    
+    background-color: white;
+    border-top: 1px solid rgba(105,105,105,0.2);
+}
+footer{
+    padding: 25px;
+    position:fixed;   
+    display: block;    
+    background-color: #333333;
+}
+
+/*MEMU TOP PRINCIPAL*/
+header .portales {
+    position: absolute;    
+    right: 0;
+
+}
+header .logo {
+    position: absolute;    
+    padding: 15px;
+    left: 0;
+    z-index: 2;
+
+}
+header .menuprin {
+    position: absolute;    
+    width: 100%;
+    z-index: 3; 
+}
+
+
+.navbar li a, .navbar .navbar-brand { 
+    color: #808080 !important;
+    background-color: transparent;
+    font-size: 1.1em;
+}
+.navbar-nav li a:hover {
+    color: #709D4E !important;
+}
+.navbar-nav li.active a {
+    color: #709D4E !important;
+    background-color: rgba(0,0,0,0)!important;
+}
+.navbar-header .navbar-toggle {
+    border-color: #808080;
+}
+
+
+/*MEMU TOP PRINCIPAL*/
