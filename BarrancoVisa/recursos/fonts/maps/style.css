@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'maps';
+  src:  url('fonts/maps.eot?nmccmz');
+  src:  url('fonts/maps.eot?nmccmz#iefix') format('embedded-opentype'),
+    url('fonts/maps.ttf?nmccmz') format('truetype'),
+    url('fonts/maps.woff?nmccmz') format('woff'),
+    url('fonts/maps.svg?nmccmz#maps') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'maps' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-googleMaps:before {
+  content: "\e900";
+}
+.icon-waze:before {
+  content: "\e901";
+}
