@@ -14,26 +14,27 @@ class Inicio extends CI_Controller {
         $this->load->view('/TemplateAdmin/menuizquierda');
         $this->load->view('/TemplateAdmin/cabecera');
         //$menus = json_encode(MENU);
-       // printf(MENU);
-       
+        // printf(MENU);
+
         $this->load->view('/TemplateAdmin/footer');
     }
-     public function menu2() {
+
+    public function menu2() {
+        $data['pluging'] = array(
+            'SweetAlert' => $this->load->view('/TemplateAdmin/Pluging/SweetAlert', '', TRUE),
+            'DataTable' => $this->load->view('/TemplateAdmin/Pluging/DataTable', '', TRUE),
+            'DatePicker' => $this->load->view('/TemplateAdmin/Pluging/DatePicker', '', TRUE)
+        );
+        $this->load->view('/TemplateAdmin/header', $data);
+        $this->load->view('/TemplateAdmin/menuizquierda');
+        $this->load->view('/TemplateAdmin/cabecera');
+        $this->load->view('/TemplateAdmin/footer');
+    }
+
+    public function menu3() {
         $this->load->view('/TemplateAdmin/header');
         $this->load->view('/TemplateAdmin/menuizquierda');
         $this->load->view('/TemplateAdmin/cabecera');
-        //$menus = json_encode(MENU);
-       // printf(MENU);
-       
-        $this->load->view('/TemplateAdmin/footer');
-    }
-     public function menu3() {
-        $this->load->view('/TemplateAdmin/header');
-        $this->load->view('/TemplateAdmin/menuizquierda');
-        $this->load->view('/TemplateAdmin/cabecera');
-        //$menus = json_encode(MENU);
-       // printf(MENU);
-       
         $this->load->view('/TemplateAdmin/footer');
     }
 

@@ -72,24 +72,14 @@
         <script src="<?php echo base_url(); ?>recursos/dist/js/pages/dashboard.js"></script>-->
         <!-- AdminLTE for demo purposes -->
         <script src="<?php echo base_url(); ?>recursos/dist/js/demo.js"></script>
-        
-
-
-
 
         <?php
-        if (isset($dataTable)) {
-            echo $dataTable;
+        if (isset($pluging)) {
+            foreach ($pluging as $key => $value) {
+                echo $value;
+            }
         }
         ?>
-
-        <?php
-        if (isset($dataTable)) {
-            echo $dataTable;
-        }
-        ?>
-
-
 
     </head>
 
