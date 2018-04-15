@@ -1,9 +1,9 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="<?php echo base_url(); ?>"><b>Sistema de </b>Parqueo</a>
-            <?php echo DIA_DE_HOY ; ?>
-            
+            <a href="<?php echo base_url(); ?>"><?php echo NOMBRESISTEMA; ?></a>
+            <?php echo DIA_DE_HOY; ?>
+
         </div>
         <!-- /.login-logo -->
         <div class="login-box-body">
@@ -11,7 +11,7 @@
 
             <form action="<?php echo base_url(); ?>login/verificarlogin" method="post">
                 <div class="form-group has-feedback">
-                    <input type="text" class="form-control" placeholder="Email" id="email" name="email"  value="<?php echo set_value('email'); ?>"/>
+                    <input type="text" class="form-control" placeholder="Email" id="email" name="email"/>
                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                     <?php echo form_error('email'); ?>
                 </div>
@@ -38,7 +38,7 @@
         <!-- /.login-box-body -->
     </div>
     <script>
-       
+
         $("button#ver").click(function () {
             var inputType = $('#psw').attr('type');
             var teclas = $("#psw").val().length;

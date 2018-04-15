@@ -13,9 +13,6 @@ class Inicio extends CI_Controller {
         $this->load->view('/TemplateAdmin/header');
         $this->load->view('/TemplateAdmin/menuizquierda');
         $this->load->view('/TemplateAdmin/cabecera');
-        //$menus = json_encode(MENU);
-        // printf(MENU);
-
         $this->load->view('/TemplateAdmin/footer');
     }
 
