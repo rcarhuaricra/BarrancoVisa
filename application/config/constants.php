@@ -99,15 +99,167 @@ define('FECHA_HORA_ACTUAL', strftime('%Y-%m-%d %H:%M:%S'));
 
 
 //define('HORA_ACTUAL', strftime('%H:%M:%S'));
-
-
 //DATOS DE EMPRESA
-define('ICONO', 'http://www.munibarranco.gob.pe/templates/principal/favicon.ico');
-define('ENTIDAD', 'Municipalidad de Barranco');
+define('ICONO', 'http://ricv.pe/wp-content/uploads/2018/04/user-2-1.jpg');
+define('ENTIDAD', 'Nombre de Entidad');
+define('NOMBRESISTEMA', '<b>Nombre del </b>Sistemas');
 
 
-
-
-define('MENU','[{"controller": "inicio/","texto": "Inicio","icono": "fa fa-home","color": "text-green"},
+define('MENU', '[{"controller": "inicio/","texto": "Inicio","icono": "fa fa-home","color": "text-green"},
                 {"controller": "inicio/menu2","texto": "menu2","icono": "fa fa-circle-o","color": "text-aqua"},
                 {"controller": "inicio/menu3","texto": "menu3","icono": "fa fa-circle-o","color": "text-aqua"}]');
+
+function GUID() {
+    if (function_exists('com_create_guid') === true) {
+        return trim(com_create_guid(), '{}');
+    }
+
+    return sprintf('%04X%04X-%04X-%04X-%04X-%04X%04X%04X', mt_rand(0, 65535), mt_rand(0, 65535), mt_rand(0, 65535), mt_rand(16384, 20479), mt_rand(32768, 49151), mt_rand(0, 65535), mt_rand(0, 65535), mt_rand(0, 65535));
+}
+
+function getIP() {
+
+    if (isset($_SERVER["HTTP_CLIENT_IP"])) {
+        return $_SERVER["HTTP_CLIENT_IP"];
+    } elseif (isset($_SERVER["HTTP_X_FORWARDED_FOR"])) {
+        return $_SERVER["HTTP_X_FORWARDED_FOR"];
+    } elseif (isset($_SERVER["HTTP_X_FORWARDED"])) {
+        return $_SERVER["HTTP_X_FORWARDED"];
+    } elseif (isset($_SERVER["HTTP_FORWARDED_FOR"])) {
+        return $_SERVER["HTTP_FORWARDED_FOR"];
+    } elseif (isset($_SERVER["HTTP_FORWARDED"])) {
+        return $_SERVER["HTTP_FORWARDED"];
+    } else {
+        return $_SERVER["REMOTE_ADDR"];
+    }
+}
+
+///ICONOS EN LA CABECERA
+$IconosAnimales = array(
+    'animal-bat',
+    'animal-bear',
+    'animal-bear-tracks',
+    'animal-bird',
+    'animal-bird-alt',
+    'animal-bone',
+    'animal-bull',
+    'animal-camel',
+    'animal-camel-alt',
+    'animal-camel-head',
+    'animal-cat',
+    'animal-cat-alt-1',
+    'animal-cat-alt-2',
+    'animal-cat-alt-3',
+    'animal-cat-alt-4',
+    'animal-cat-with-dog',
+    'animal-cow',
+    'animal-cow-head',
+    'animal-crab',
+    'animal-crocodile',
+    'animal-deer-head',
+    'animal-dog',
+    'animal-dog-alt',
+    'animal-dog-barking',
+    'animal-dolphin',
+    'animal-duck-tracks',
+    'animal-eagle-head',
+    'animal-eaten-fish',
+    'animal-elephant',
+    'animal-elephant-alt',
+    'animal-elephant-head',
+    'animal-elephant-head-alt',
+    'animal-elk',
+    'animal-fish',
+    'animal-fish-alt-1',
+    'animal-fish-alt-2',
+    'animal-fish-alt-3',
+    'animal-fish-alt-4',
+    'animal-fox',
+    'animal-fox-alt',
+    'animal-frog',
+    'animal-frog-tracks',
+    'animal-froggy',
+    'animal-giraffe',
+    'animal-giraffe-alt',
+    'animal-goat-head',
+    'animal-goat-head-alt-1',
+    'animal-goat-head-alt-2',
+    'animal-gorilla',
+    'animal-hen-tracks',
+    'animal-horse-head',
+    'animal-horse-head-alt-1',
+    'animal-horse-head-alt-2',
+    'animal-horse-tracks',
+    'animal-jellyfish',
+    'animal-kangaroo',
+    'animal-lemur',
+    'animal-lion',
+    'animal-lion-alt',
+    'animal-lion-head',
+    'animal-lion-head-alt',
+    'animal-monkey',
+    'animal-monkey-alt-1',
+    'animal-monkey-alt-2',
+    'animal-monkey-alt-3',
+    'animal-octopus',
+    'animal-octopus-alt',
+    'animal-owl',
+    'animal-panda',
+    'animal-panda-alt',
+    'animal-panther',
+    'animal-parrot',
+    'animal-parrot-lip',
+    'animal-paw',
+    'animal-pelican',
+    'animal-penguin',
+    'animal-pig',
+    'animal-pig-alt',
+    'animal-pigeon',
+    'animal-pigeon-alt',
+    'animal-pigeons',
+    'animal-rabbit-running',
+    'animal-rat-alt',
+    'animal-rhino',
+    'animal-rhino-head',
+    'animal-rooster',
+    'animal-seahorse',
+    'animal-seal',
+    'animal-shrimp',
+    'animal-snail',
+    'animal-snail-alt-1',
+    'animal-snail-alt-2',
+    'animal-snake',
+    'animal-squid',
+    'animal-squirrel',
+    'animal-tiger',
+    'animal-tiger-alt',
+    'animal-turtle',
+    'animal-whale',
+    'animal-woodpecker',
+    'animal-zebra'
+); //colors array
+
+$c1 = sizeof($IconosAnimales) - 1; //get position of the last element within the colors array
+//    -- OR, if you prefer --
+//$c1=count($colors)-1;//get position of the last element within the colors array
+//pick a color at random from the colors array - 'Mersenne Twister based'
+$IconoAnimal = $IconosAnimales[mt_rand(0, $c1)];
+///ICONOS EN LA CABECERA
+define('ANIMAL', $IconoAnimal);
+
+//FECHA
+date_default_timezone_set("America/Lima");
+//$HOY=now('');
+$HOY = date('Y-m-d H:i:s');
+define('HOY', $HOY);
+
+Function fechas($dato) {
+    date_default_timezone_set("America/Lima");
+    /* $date = date_create($dato);     
+      return date_format($date, 'd-F-Y'); */
+    $time = strtotime($dato);
+
+    $newformat = date('d-M-Y', $time);
+
+    echo $newformat;
+}

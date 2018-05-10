@@ -50,6 +50,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   | Examples:	my-controller/index	-> my_controller/index
   |		my-controller/my-method	-> my_controller/my_method
  */
-$route['default_controller'] = 'login';
+$route['default_controller'] = 'Inicio';
 $route['404_override'] = 'login ';
 $route['translate_uri_dashes'] = FALSE;
+
+$route['login'] = 'user/login';
+$route['register'] = 'user/registrar';
+$route['cerrar'] = 'user/logout';
+$route['mascotas'] = 'inicio/mascotas';
+$route['mascotas/(:any)'] = 'inicio/mascotas/$1';
+
+
+
+/*******ADMINISTRAR ********/
+
+/////////////ESPECIES
+$route['TableEspecies'] = 'animales/EspeciesController/EspecieTable';
+$route['NewEspecie'] = 'animales/EspeciesController/NuevaEspecie';
+$route['EspecieUpdateEstado'] = 'animales/EspeciesController/UpdateEspecieEstado';
+
+/////////////RAZAS
+$route['TableRazas'] = 'animales/RazasController/RazasTable';
+$route['NewRazas'] = 'animales/RazasController/NuevaRaza';
+$route['RazasUpdateEstado'] = 'animales/RazasController/UpdateRazasEstado';
+
+
+/////////////COLOR
+$route['TableColor'] = 'animales/ColorController/ColorTable';
+$route['NewColor'] = 'animales/ColorController/NuevoColor';
+$route['ColorUpdateEstado'] = 'animales/ColorController/UpdateColorEstado';

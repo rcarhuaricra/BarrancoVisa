@@ -72,27 +72,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   | the query builder class.
  */
 
-$active_group = 'Barranco';
+$active_group = 'proyect';
 $query_builder = TRUE;
 
-$db['Barranco']['hostname'] = "localhost";
-$db['Barranco']['port'] = "";
-$db['Barranco']['username'] = "";
-$db['Barranco']['password'] = "";
-$db['Barranco']['database'] = "";
-$db['Barranco']['dbdriver'] = "mysqli";
-$db['Barranco']['dbprefix'] = "";
-$db['Barranco']['pconnect'] = FALSE;
-$db['Barranco']['db_debug'] = (ENVIRONMENT !== 'production');
-$db['Barranco']['cache_on'] = FALSE;
-$db['Barranco']['cachedir'] = "";
-$db['Barranco']['char_set'] = "utf8";
-$db['Barranco']['dbcollat'] = "utf8_general_ci";
-$db['Barranco']['swap_pre'] = "";
-$db['Barranco']['encrypt'] = FALSE;
-$db['Barranco']['compress'] = FALSE;
-$db['Barranco']['stricton'] = FALSE;
-$db['Barranco']['failover'] = array();
-$db['Barranco']['save_queries'] = TRUE;
+$db['proyect']['hostname'] = "localhost";
+$db['proyect']['port'] = "";
+$db['proyect']['username'] = "root";
+$db['proyect']['password'] = "";
+$db['proyect']['database'] = "proyectobase";
+$db['proyect']['dbdriver'] = "mysqli";
+$db['proyect']['dbprefix'] = "";
+$db['proyect']['pconnect'] = FALSE;
+$db['proyect']['db_debug'] = (ENVIRONMENT !== 'production');
+$db['proyect']['cache_on'] = FALSE;
+$db['proyect']['cachedir'] = "";
+$db['proyect']['char_set'] = "utf8";
+$db['proyect']['dbcollat'] = "utf8_general_ci";
+$db['proyect']['swap_pre'] = "";
+$db['proyect']['encrypt'] = FALSE;
+$db['proyect']['compress'] = FALSE;
+$db['proyect']['stricton'] = FALSE;
+$db['proyect']['failover'] = array();
+$db['proyect']['save_queries'] = TRUE;
 
 
